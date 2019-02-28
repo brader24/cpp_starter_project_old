@@ -1,0 +1,11 @@
+bullet_char: '*'
+command_case: lower
+dangle_parens: true
+enum_char: '.'
+keyword_case: upper
+line_ending: unix
+line_width: 100
+max_subargs_per_line: 3
+separate_ctrl_name_with_space: false
+separate_fn_name_with_space: false
+tab_size: 4
