@@ -5,6 +5,7 @@ task:
   build_script:
   - sudo apt-get update
   - sudo apt-get install --assume-yes git
+  - sudo apt-get upgrade --assume-yes cmake
   - pwd
   - gcc-8 --version
   - cmake --version
