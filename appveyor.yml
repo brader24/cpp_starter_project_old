@@ -1,9 +1,5 @@
 image:
   - Visual Studio 2017
-install:
-  - cinst cmake --version 3.13.4
-  - ps: set PATH=%PATH%;C:\Users\appveyor\AppData\Roaming\Python\Scripts
-  - ps: pip install --user conan
 clone_folder: c:\projects\source
 build_script:
 - cmd: >-
@@ -14,6 +10,10 @@ build_script:
     mkdir build
 
     cd build
+   
+    set PATH=%PATH%;C:\Users\appveyor\AppData\Roaming\Python\Scripts
+    
+    pip install --user conan
     
     conan install c:\projects\source
     
