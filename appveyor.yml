@@ -4,10 +4,8 @@ clone_folder: c:\projects\source
 install:
 - cmd: >-
     set PATH=%PATH%;C:\Users\appveyor\AppData\Roaming\Python\Scripts
-    
+
     pip install --user conan
-    
-    conan install c:\projects\source
 
     cmake --version
 
@@ -18,7 +16,9 @@ build_script:
     mkdir build
 
     cd build
-       
+
+    conan install c:\projects\source
+
     cmake c:\projects\source -G "Visual Studio 15"
     
     cmake --build . --config "Release"
