@@ -7,9 +7,15 @@ build_script:
 
     cd build
     
+    pip install --user conan
+    
+    set PATH=%PATH%;C:\Users\appveyor\AppData\Roaming\Python\Scripts
+    
+    conan install c:\projects\source
+    
     cmake c:\projects\source -G "Visual Studio 15"
     
-    cmake --build . --config "Debug"
+    cmake --build . --config "Release"
 
 test_script:
-- cmd: ctest -C Debug
+- cmd: ctest -C Release
