@@ -1,0 +1,2 @@
+add_subdirectory(project_warnings)
+add_subdirectory(project_options)
