@@ -35,3 +35,5 @@ venv/
 *.out
 *.app
 
+# Other Generated Files
+*.user
