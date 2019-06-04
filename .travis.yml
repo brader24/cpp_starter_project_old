@@ -40,7 +40,8 @@ script:
 #  - VERBOSE=1 cmake --build . -- -j2 | python ../annotate.py --tool gcc --name "Gcc Build" --tee
   - VERBOSE=1 cmake --build . -- -j2
   - ctest -j2
-  - if [ "${COVERAGE}" = "1" ]; then bash <(curl -s https://codecov.io/bash) -x $GCOV 2>/dev/null ; fi
+#  - if [ "${COVERAGE}" = "1" ]; then bash <(curl -s https://codecov.io/bash) -x $GCOV 2>/dev/null ; fi
+  - bash <(curl -s https://codecov.io/bash) -x $GCOV
 
 #after_script:
 #  - curl -s https://report.ci/upload.py | python
